@@ -1,0 +1,57 @@
+.pdf ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: last baseline;
+    align-items: flex-start;
+}
+input {
+    display: none;
+}
+* li:hover {
+    box-shadow: 3px 4px 10px whitesmoke;
+    background-color: rgb(255, 255, 255);
+}
+.pdf li {
+    display: flex;
+    padding: 3px;
+    margin: 4px;
+    border-radius: 8px;
+    width: fit-content;
+    align-items: center;
+    font-size: 24px;
+    background-image: linear-gradient(to right,#40e0d0,rgba(255, 0, 0, 0.473));
+}
+.pdf summary {
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.575),rgba(0, 0, 255, 0.432));
+    border-radius: 6px;
+    padding: 4px;
+}
+.pdfList a {
+    text-decoration: none;
+    word-wrap: break-word;
+}
+.pdfList li:hover,a:hover {
+    color: whitesmoke;
+}
+
+.pdf li details .pdfList {
+    left: 80px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: #99faf0;
+    margin: 0 30px 0 0;
+    padding: 3px 8px;
+}
+.pdf li summary {
+    font-size: 16px;
+}
+.pdf li> * {
+    padding: 5px;
+}
+/* iframe {
+    width:calc(100% + 30px);
+    display: none;
+    background-color: whitesmoke;
+} */

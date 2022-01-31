@@ -1,0 +1,9 @@
+.explore ul {
+    list-style: none;
+}
+.explore li h3::before {
+    content: '🔘';
+}
+.explore li h3 {
+    margin-left: 4px;
+}

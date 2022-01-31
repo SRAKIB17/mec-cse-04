@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result convert cgpa</title>
+    <script src="js/cgpa-js/index.js"></script>
+    <link rel="stylesheet" href="css/cgpa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/cgpa-js/count.js"></script>
+    
+</head>
+<body>
+    <main>
+        <section class="mt-5">
+            <div class="bg-cm"  >
+                <div>
+                    Note:
+                    <li class="p-1">NpS mean Number per Subject</li>
+                    <li class="p-1">CpS mean Credit per Subject</li>
+                    <li class="p-1">Each value separate with comma(,).</li>
+                    <li class="p-1">Each value <span class="bg-danger text-white p-1 rounded-3">required</span> </li>
+                    <li class="p-1">Please maintain each subject and credit value sequence</li>
+                </div>
+                <div>
+                    <h6>Example Sequence</h6>
+                    <img src="images/exmple.png" alt="" style="max-width: 100%;" height="30%">
+                    <img src="images/exmple-2.png" alt="" style="max-width: 100%;" height="20%">
+                    
+                </div>
+                
+                
+            </div>
+            <!-- total credit -->
+            <div>
+                <div class="getInput">
+                    <!-- for number -->
+                    <label for="number">Number:</label>
+                    <div class="count">
+                        <p id="showCountNumber"></p>
+                    </div>
+                    
+                    <input type="text" name="" value="" id="number" placeholder="e.g. 45, 68, 88, 66, 90" onclick="numberCount()">
+                    
+                    <button onclick="document.getElementById('number').value = ''">X</button>
+                </div>
+                <!-- for per subject credit -->
+                <div class="getInput">
+                    <label for="perSubjectCredit">Subject Credit:</label>
+                    <div class="count">
+                        <p id="showCountCredit"></p>
+                    </div>
+                    <input type="text" name="" value="" id="perSubjectCredit" placeholder="e.g. 3, 2, 1, 2.4, 4" onclick="creditCount()">
+                    <button onclick="document.getElementById('perSubjectCredit').value = ''">X</button>
+                </div>
+                <div>
+                    <input type="submit" onclick="tableData()"
+                    value="Show Result">
+                </div>
+            </div>
+            
+        </section>
+        <section class="mb-5 w-100">
+            <p id="errorMsg"></p>
+            
+                <div class="row">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Sl. No</th>
+                                <th>Number</th>
+                                <th>Credit/Subject</th>
+                                <th>Grade Letter</th>
+                                <th> Grade Point</th>
+                                <th>Earned Points</th>
+                                <th>CGPA</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultData">
+                            
+                        </tbody>
+                    </table>
+                </div>
+                
+            
+        </section>
+    </main>
+
+</body>
+</html>
+

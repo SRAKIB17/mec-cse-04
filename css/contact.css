@@ -1,0 +1,16 @@
+
+tr {
+    border-collapse: 2px;
+}
+tr:nth-child(odd) {
+    background-color: gainsboro;
+}
+tr:nth-child(even) {
+    background-color: rgba(105, 105, 255, 0.308);
+}
+table{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
